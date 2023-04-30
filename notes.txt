@@ -1,0 +1,27 @@
+Game: delivery
+Goal: deliver as many packages as possible before you get fired
+Score: points earned for each package delivered.  Each package has a count-down timer on it.  Player gets that score value equal to the countdown timer on the package when the package is delivered.  (placed on truck and truck sent away)
+Lose: none.  Day ends.  Determine score.
+Win: Play until first day ends in 8 minutes (1 minute per "hour"). Get high score
+
+Gameplay:
+- conveyor belt bottom.  Road above where delivery trucks appear, 3 trucks at a time.
+- you can skip a truck but it will take time to come back
+- packages periodically appear on right of conveyor belt and come down to left and stop
+- player must drag package into a truck that can carry it. 
+- player clicks "deliver" button on the truck when ready, score is added at this point.
+- when package delivered score points. 
+- the truck will then leave off left of screen to "deliver"
+- random trucks
+- random packages
+- You do not have to deliver in order.
+- Packages can only fit on trucks that can carry them
+- 2 requirements: size and weight
+- trucks are dynamic generated, bigger wheels means can carry more weight, bigger box means can carry larger size. 
+- you cannot load a truck until it is parked
+- you can load a box before it stops moving, however
+
+
+EXTRAS
+- using trucks that are too big hurts score ( subtract the difference between size of package and capacity of truck)
+- add colour coordination.  Some packages are coloured and can only be carried by same coloured trucks
