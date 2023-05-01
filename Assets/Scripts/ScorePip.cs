@@ -33,7 +33,7 @@ public class ScorePip : MonoBehaviour
             timeoutTimer += Time.deltaTime;
             if (timeoutTimer > timeoutWaitTime)
             {
-                running = false;
+                hide();
                 timeoutTimer = timeoutTimer - timeoutWaitTime;
             }
         }
@@ -61,11 +61,18 @@ public class ScorePip : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, endPosition, 1 * Time.deltaTime);
             if (transform.position == endPosition)
             {
-                pipText.SetText("");
-                running = false;
+                hide();
+                
             }
             yield return null;
         }
         yield return null;
+    }
+
+    private void hide()
+    {
+        transform.position = new Vector3(100, 100, zPos);
+        pipText.SetText("");
+        running = false;
     }
 }
